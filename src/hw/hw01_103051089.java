@@ -25,7 +25,7 @@ public class hw01_103051089 {
 		int buyPeach=scn.nextInt();
 		int reMoney=getMoney-(buyApple*15)-(buyOrange*20)-(buyPeach*30);
 		int cont50=0,cont5=0,cont1=0;
-		if(reMoney<=0){//不夠買或是不找零
+		if(reMoney<0){//不夠買
 			System.out.println("0");
 		}else{			
 			if(reMoney>=50){//需要找50元銅板
@@ -48,7 +48,8 @@ public class hw01_103051089 {
 				}				
 			}
 			System.out.println("買了"+buyApple+"顆蘋果\t"+buyOrange+"顆柳丁\t"+buyPeach+"顆桃子");
-			System.out.println("找了"+cont50+"個50元"+cont5+"個5元"+cont1+"個1元，共計"+(cont50*50+cont5*5+cont1)+"元");
+			System.out.println("需找零"+cont50+"個50元"+cont5+"個5元"+cont1+"個1元，共計"+(cont50+cont5+cont1)+"個銅板");
+			
 		}
 		
 	}
